@@ -219,6 +219,7 @@ module.exports = {
         error: "#E31A1A",
         'primary-grey': "#E0E5F2",
         'placeholder-grey': "#8F9BBA",
+      
 
       },
       boxShadow: {
