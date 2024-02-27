@@ -13,13 +13,12 @@
     <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css">
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="./assets/css/loopple/loopple.css">
-</head>
+  </head>
 
-<body class="bg-gray-100">
-  <!-- Header with nav-bar and hamburger -->
-  <div class=" mx-auto bg-white">
-    <!-- Main container with navigation and header content -->
-    <div class="relative flex flex-wrap items-center justify-between w-full py-7 shrink-0">
+  <body class="bg-gray-100">
+    <!-- Header with nav-bar and hamburger -->
+    <div class="mx-auto bg-white">
+      <div class="relative flex flex-wrap items-center justify-between w-full py-7 shrink-0">
       <div>
         <img src="https://loopple.s3.eu-west-3.amazonaws.com/images/6wjH3M3DDKVZrZYDViFptLEOoeHnZxEgC3lorweP.png" class="h-8 px-2 " >
       </div>
@@ -274,21 +273,25 @@
    </section>
 
   <!-- GETTING STARTED -->
-    <section class="w-full mt-32 container grid grid-cols-1 gap-20 md:grid-cols-2">
-        <div>
-          <img class="sm:hidden md:block" src="assets/component-4/getting-started.png">
+  <section class="w-full mt-32 container grid grid-cols-1 gap-20 md:grid-cols-2">
+      <!--left side of the grid  -->
+      <div>
+        <img class="sm:hidden md:block" src="assets/component-4/getting-started.png">
+      </div>
+
+      <!-- right side of the grid -->
+      <div> 
+        <!-- heading and description -->
+        <div class="flex flex-col gap-2 text-center md:text-start col-start-2">
+          <h2 class="text-3xl font-extrabold md:text-4xl lg:text-5xl text-dark-grey-900">How Cache Works?</h2>
+          <p class="text-base font-medium leading-7 text-dark-grey-600" style="color:rgb(55, 65, 81); font-family:Söhne, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+            Cache Bank simplifies sign-up with a user-friendly website, streamlined account options, and an
+            efficient verification process, making banking accessible and hassle-free for developers.
+          </p>
         </div>
 
-        <div>
-          <div class="flex flex-col gap-2 text-center md:text-start col-start-2">
-            <h2 class="text-3xl font-extrabold md:text-4xl lg:text-5xl text-dark-grey-900">How Cache Works?</h2>
-            <p class="text-base font-medium leading-7 text-dark-grey-600" style="color:rgb(55, 65, 81); font-family:Söhne, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
-              Cache Bank simplifies sign-up with a user-friendly website, streamlined account options, and an
-              efficient verification process, making banking accessible and hassle-free for developers.
-            </p>
-          </div>
-
-          <div class="grid w-full grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-10 mt-10">
+        <!-- step-by-step mini-grid -->
+        <div class="grid w-full grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-10 mt-10">
             <div class="flex flex-col items-start gap-1">
               <span class="flex items-center justify-center w-12 h-12 rounded-full mb-2 bg-green-500 text-base font-bold text-white">
                 1
@@ -320,11 +323,9 @@
               <h3 class="text-base font-bold leading-tight text-dark-grey-900">Verify and Submit</h3>
               <p class="text-base leading-7 text-dark-gery-600 font-sans">Check your information, agree to terms, and submit for account approval.</p>
             </div>
-
-            
-          </div>
-        </div>
-  </section>
+          </div> <!--end of the step-by-step mini-grid-->
+      </div> <!--end of right-side of the grid-->
+    </section>
  
   <script>
     document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
