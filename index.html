@@ -13,44 +13,54 @@
     <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css">
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="./assets/css/loopple/loopple.css">
+    <!-- Things to Add
+    - back to top button 
+    - smooth scroll 
+    - on scroll for stats 
+    - fix the links 
+    
+    -->
   </head>
 
   <body class="bg-gray-100">
     <!-- Header with nav-bar and hamburger -->
-    <header class="mx-auto bg-white top-0 w-full fixed">
-      <div class="relative flex flex-wrap items-center justify-between w-full py-5 shrink-0">
-      <div>
+    <header class="mx-auto bg-white w-full top-0 fixed">
+      <div class="relative flex flex-wrap items-center justify-between w-full py-4 shrink-0">
+        <div>
         <img src="https://loopple.s3.eu-west-3.amazonaws.com/images/6wjH3M3DDKVZrZYDViFptLEOoeHnZxEgC3lorweP.png" class="h-8 px-2 " >
+        </div>
+      
+        
+        <nav class="hidden md:flex items-center justify-between gap-12 text-black">
+          <a href="#product" class="text-sm font-normal text-grey-800 hover:text-black">Product</a>
+          <a href="#features" class="text-sm font-normal text-grey-800 hover:text-black">Features</a>
+          <a href="#getting-started" class="text-sm font-normal text-grey-800 hover:text-black">Get Started</a>
+          <a href="#contact" class="text-sm font-normal text-grey-800 hover:text-black">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-8 ">
+          <button class="text-sm font-bold text-dark-grey-800  hover:text-dark-grey-900">Log In</button>
+          <button class="button px-4 py-2 mr-2 text-sm font-bold text-white bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
+        </div>
+        <!-- Hamburger and mobile menu -->
+        <button class="md:hidden" id="mobile-menu-toggle">
+          <svg xmls="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"  class=" h-6 w-6 mr-2">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+        <nav id="mobile-menu" class="absolute flex md:hidden flex-col items-start shadow-main justify-center gap-3 overflow-hidden bg-white max-h-screen top-full w-full px-2 m-0">
+          <a href="#product" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Product</a>
+          <a href="#features" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Features</a>
+          <a href="#getting-started" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Get Started</a>
+          <a href="#contact" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Contact</a>
+          <button class="flex items-center px-4 py-2 text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
+          <button class="flex items-center px-4 py-2 mb-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button> 
+        </nav>
       </div>
-      <nav class="hidden md:flex items-center justify-between gap-12 text-black">
-        <a href="#" class="text-sm font-normal text-grey-800 hover:text-black">Product</a>
-        <a href="#" class="text-sm font-normal text-grey-800 hover:text-black">Features</a>
-        <a href="#" class="text-sm font-normal text-grey-800 hover:text-black">Get Started</a>
-        <a href="#" class="text-sm font-normal text-grey-800 hover:text-black">Contact</a>
-      </nav>
-      <div class="hidden md:flex items-center gap-8 ">
-        <button class="text-sm font-bold text-dark-grey-800  hover:text-dark-grey-900">Log In</button>
-        <button class="button px-4 py-2 mr-2 text-sm font-bold text-white bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
-      </div>
-      <!-- Hamburger and mobile menu -->
-      <button class="md:hidden" id="mobile-menu-toggle">
-        <svg xmls="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"  class=" h-6 w-6 mr-2" >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" ></path>
-        </svg>
-      </button>
-      <nav id="mobile-menu" class="absolute flex md:hidden flex-col items-start shadow-main justify-center gap-3 overflow-hidden bg-white max-h-screen top-full w-full px-2">
-        <a href="#" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Product</a>
-        <a href="#" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Features</a>
-        <a href="#" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Get Started</a>
-        <a href="#" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Contact</a>
-        <button class="flex items-center px-4 py-2 text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
-        <button class="flex items-center px-4 py-2 mb-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button> 
-      </nav>
     </header>
     
     <!-- Component 2: hero and endorsments -->
     <!-- Hero -->
-    <section class="grid p-4 w-full grid-cols-1 my-auto mt-12 md:grid-cols-2 xl:gap-14 md:gap-5">
+    <section class="grid p-4 w-full grid-cols-1 my-auto mt-8 md:grid-cols-2 xl:gap-14 md:gap-5">
       <div class="flex flex-col justify-center col-span-1 text-center lg:text-start">
         <h1 class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900">The Clever Place to Keep Your Cache</h1>
         <p class="mb-6 text-base font-normal leading-7 lg:w-3/4 text-gray-900">Cache Bank is designed exclusively for software developers. We understand your financial needs are as unique the code you write. Our services offer cutting-edge financial solutions that help you take care of your cash.</p>
@@ -66,7 +76,7 @@
     </section>
 
     <!-- Endorsements -->
-    <section class="w-full container flex flex-col items-center gap-8 mx-auto my-40">
+    <section id="product" class="w-full container flex flex-col items-center gap-8 mx-auto my-20 mt-16">
       <p class="text-center text-dark-grey-600 font-semibold mb-10 text-2xl">Endorsed by global companies like</p>
       <div class="flex flex-wrap items-center justify-center w-full gap-6 lg:gap-0 lg:flex-nowrap lg:justify-between">
         <span>
@@ -102,10 +112,10 @@
     </section>
 
     <!-- Component 3: Features (with the cards) -->
-    <section class="container mx-auto flex flex-col items-center justify-center">
+    <section id="features" class="container mx-auto flex flex-col items-center justify-center py-10">
       <!-- HEADER -->
-      <div class="flex flex-col items-center justify-center">
-        <h1 class="mb-4 text-3xl lg:text-4xl font-extrabold text-dark-grey-900 text-center">Elevate Your Banking with Cache</h1>
+      <div class="flex flex-col items-center justify-center py-10">
+        <h1  class="mb-4 text-3xl lg:text-4xl font-extrabold text-dark-grey-900 text-center">Elevate Your Banking with Cache</h1>
         <p class="text-lg text-center lg:w-7/12 text-grey-700">
           We merge cutting-edge banking with a deep understanding of software developers' needs. Experience tailored financial solutions, advanced security, and tech-focused support designed just for you.
         </p>
@@ -259,14 +269,14 @@
     </section> <!--end of stats-->
 
     <!-- GETTING STARTED -->
-    <section class="w-full mt-32 container grid grid-cols-1 gap-20 md:grid-cols-2">
+    <section id="getting-started" class="w-full mt-32 container grid grid-cols-1 gap-20 md:grid-cols-2">
       <!--left side of the grid  -->
-      <div>
+      <div class="mt-16">
         <img class="sm:hidden md:block" src="assets/component-4/getting-started.png">
       </div>
 
       <!-- right side of the grid -->
-      <div> 
+      <div class="mt-20"> 
         <!-- heading and description -->
         <div class="flex flex-col gap-2 text-center md:text-start col-start-2">
           <h2 class="text-3xl font-extrabold md:text-4xl lg:text-5xl text-dark-grey-900">How Cache Works?</h2>
@@ -315,9 +325,9 @@
 
     <!-- Component 5: Contact and footer -->
     <!-- CONTACT SECTION -->
-    <section class="w-full">
+    <section id="contact" class="w-full">
       <!-- overall grid container ?? -->
-      <div class="container flex flex-col items-center gap-16 mx-auto my-32">
+      <div class="container flex flex-col items-center gap-16 mx-auto my-32 mt-16">
         <!-- container for the contact info cards -->
         <div class="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           <!-- contact info card 1 -->
@@ -429,7 +439,7 @@
 
             <!-- copyright -->
             <div class="flex items-center">
-              <p class="text-base font-normal leading-7 text-center ml-5">2024 Cache Bank. All rights reserved.</p>
+              <p class="text-base font-normal leading-7 text-center ml-5 text-white">2024 Cache Bank. All rights reserved.</p>
             </div>
           </div>
         </div>
