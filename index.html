@@ -17,8 +17,8 @@
 
   <body class="bg-gray-100">
     <!-- Header with nav-bar and hamburger -->
-    <div class="mx-auto bg-white">
-      <div class="relative flex flex-wrap items-center justify-between w-full py-7 shrink-0">
+    <header class="mx-auto bg-white top-0 w-full fixed">
+      <div class="relative flex flex-wrap items-center justify-between w-full py-5 shrink-0">
       <div>
         <img src="https://loopple.s3.eu-west-3.amazonaws.com/images/6wjH3M3DDKVZrZYDViFptLEOoeHnZxEgC3lorweP.png" class="h-8 px-2 " >
       </div>
@@ -30,7 +30,7 @@
       </nav>
       <div class="hidden md:flex items-center gap-8 ">
         <button class="text-sm font-bold text-dark-grey-800  hover:text-dark-grey-900">Log In</button>
-        <button class="px-4 py-2 mr-2 text-sm font-bold text-white bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
+        <button class="button px-4 py-2 mr-2 text-sm font-bold text-white bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
       </div>
       <!-- Hamburger and mobile menu -->
       <button class="md:hidden" id="mobile-menu-toggle">
@@ -46,8 +46,8 @@
         <button class="flex items-center px-4 py-2 text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
         <button class="flex items-center px-4 py-2 mb-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button> 
       </nav>
-    </div>
-    </div>
+    </header>
+    
     <!-- Component 2: hero and endorsments -->
     <!-- Hero -->
     <section class="grid p-4 w-full grid-cols-1 my-auto mt-12 md:grid-cols-2 xl:gap-14 md:gap-5">
