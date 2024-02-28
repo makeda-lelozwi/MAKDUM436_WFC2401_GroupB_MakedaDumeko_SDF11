@@ -57,10 +57,12 @@
         </nav>
       </div>
     </header>
+
+    <button id="back-to-top-btn" class="fixed bg-pink-500 text-white rounded-xl bottom-5 right-5 px-4 py-2 text-sm font-bold">To top</button>
     
     <!-- Component 2: hero and endorsments -->
     <!-- Hero -->
-    <section class="grid p-4 w-full grid-cols-1 my-auto mt-8 md:grid-cols-2 xl:gap-14 md:gap-5">
+    <section class="grid p-8 w-full grid-cols-1 my-auto mt-8 md:grid-cols-2 xl:gap-14 md:gap-5">
       <div class="flex flex-col justify-center col-span-1 text-center lg:text-start">
         <h1 class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900 sm:mt-16 lg:mt-0">The Clever Place to Keep Your Cache</h1>
         <p class="mb-6 text-base font-normal leading-7 lg:w-3/4 text-gray-900">Cache Bank is designed exclusively for software developers. We understand your financial needs are as unique the code you write. Our services offer cutting-edge financial solutions that help you take care of your cash.</p>
@@ -380,6 +382,7 @@
         </div> <!--end of container for contact info cards-->
       </div> <!--end of overall container-->
     </section> <!--end of contact section-->
+    
 
     <!-- FOOTER -->
     <footer>
@@ -454,6 +457,24 @@
       document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
         document.getElementById("mobile-menu").classList.toggle("hidden");
       })
+
+      document.addEventListener("DOMContentLoaded", function () {
+      var backToTopBtn = document.getElementById("back-to-top-btn");
+
+      window.addEventListener("scroll", function () {
+        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+      });
+
+      backToTopBtn.addEventListener("click", function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        });
+      });
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
