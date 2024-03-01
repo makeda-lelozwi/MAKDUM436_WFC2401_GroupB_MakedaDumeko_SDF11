@@ -10,7 +10,8 @@ https://www.loom.com/share/290f4a126b5f4bbf86bf8ab0b0d2aa5f?sid=e3da7b15-7629-4e
 
 3. open the html webpage from the folder where you saved the files. 
 
-
+# Presentation slides
+https://docs.google.com/presentation/d/1aNxS_lts4uzVU7ULQFzvcrkjVv9ZrFkw_lq9B1LWQls/edit?usp=sharing
 
 
 ##Instalatton of tailwind
