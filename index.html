@@ -42,11 +42,11 @@
         </button>
 
         <nav id="mobile-menu" class="absolute hidden w-full">
-          <div class="my-8 flex absolute flex-col items-start shadow-main justify-center gap-3 bg-white max-h-screen top-full w-full px-2 m-0">
-            <a href="#product" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Product</a>
-            <a href="#features" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Features</a>
-            <a href="#getting-started" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Get Started</a>
-            <a href="#contact" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Contact</a>
+          <div class="mobile-menu-div my-8 flex absolute flex-col items-start shadow-main justify-center gap-3 bg-white max-h-screen top-full w-full px-2 m-0">
+            <a href="#product" class="menu-link text-base font-normal text-grey-800 hover:text-black">Product</a>
+            <a href="#features" class="menu-link text-base font-normal text-grey-800 hover:text-black">Features</a>
+            <a href="#getting-started" class="menu-link text-base font-normal text-grey-800 hover:text-black">Get Started</a>
+            <a href="#contact" class="menu-link text-sm font-normal text-grey-800 hover:text-black">Contact</a>
             <button class="flex items-center px-4 py-2 text-sm font-bold text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
             <button class="flex items-center px-4 py-2 mb-2 text-sm font-bold text-white bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button> 
           </div>
@@ -58,7 +58,7 @@
     
     <!-- Component 2: hero and endorsments -->
     <!-- Hero -->
-    <section class="grid p-8 w-full grid-cols-1 my-auto mt-8 md:grid-cols-2 xl:gap-14 md:gap-5">
+    <section class="grid p-8 w-full grid-cols-1 mt-16 md:grid-cols-2 xl:gap-14 md:gap-5">
       <div class="flex flex-col justify-center col-span-1 text-center lg:text-start">
         <h1 class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900 sm:mt-16 lg:mt-0">The Clever Place to Keep Your Cache</h1>
         <p class="mb-6 text-base font-normal leading-7 lg:w-3/4 text-gray-900">Cache Bank is designed exclusively for software developers. We understand your financial needs are as unique the code you write. Our services offer cutting-edge financial solutions that help you take care of your cash.</p>
@@ -75,7 +75,7 @@
 
     <!-- Endorsements -->
     <section id="product" class="w-full container flex flex-col items-center gap-8 mx-auto my-20 mt-16">
-      <p class="text-center text-dark-grey-600 font-semibold mb-10 text-2xl">Endorsed by global companies like</p>
+      <p class="text-center text-dark-grey-600 font-semibold mb-10 mt-16 text-2xl">Endorsed by global companies like</p>
       <div class="flex flex-wrap items-center justify-center w-full gap-6 lg:gap-0 lg:flex-nowrap lg:justify-between">
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 64 64" style="fill: #1b2559">
@@ -449,12 +449,23 @@
     <!-- JAVASCRIPT -->
     <script>
       //Nav-bar hamburger functionality 
+      
       document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
         document.getElementById("mobile-menu").classList.toggle("hidden");
       })
 
-      
+      const menuLinks = document.querySelectorAll(".menu-link");
 
+      menuLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+              const mobileMenu = document.querySelector(".mobile-menu-div");
+              mobileMenu.classList.add('hidden');
+            });
+          });
+      
+    
+     
+      
       // Back to top button
       document.addEventListener("DOMContentLoaded", function () {
         var backToTopBtn = document.getElementById("back-to-top-btn");
@@ -472,6 +483,8 @@
         });
       });
     </script>
+
+    <script src="index.js"></script>
 
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
