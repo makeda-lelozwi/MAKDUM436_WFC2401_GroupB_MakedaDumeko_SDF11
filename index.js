@@ -7,16 +7,15 @@
   })
 
   menuLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-          mobileMenu.classList.toggle("hidden")
-        });
-      });
+    link.addEventListener('click', function () {
+      mobileMenu.classList.toggle("hidden")
+    });
+  });
 
- 
-  
   // Back to top button
+
   document.addEventListener("DOMContentLoaded", function () {
-    var backToTopBtn = document.getElementById("back-to-top-btn");
+    const backToTopBtn = document.getElementById("back-to-top-btn");
 
     window.addEventListener("scroll", function () {
       if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 20) {
