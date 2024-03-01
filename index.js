@@ -1,11 +1,9 @@
-  //Nav-bar hamburger functionality 
-
+  //Nav-bar and hamburger functionality 
   const menuLinks = document.querySelectorAll(".menu-link");
   const mobileMenu = document.getElementById("mobile-menu")
 
   document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
-    document.getElementById("mobile-menu").classList.toggle("hidden");
-    
+    mobileMenu.classList.toggle("hidden");
   })
 
   menuLinks.forEach(function (link) {

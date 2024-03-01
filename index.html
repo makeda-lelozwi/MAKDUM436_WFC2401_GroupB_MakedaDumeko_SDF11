@@ -42,7 +42,7 @@
         </button>
 
         <nav id="mobile-menu" class="absolute hidden w-full">
-          <div id="menu-div" class="mobile-menu-div my-8 flex absolute flex-col items-start shadow-main justify-center gap-3 bg-white max-h-screen top-full w-full px-2 m-0">
+          <div class="my-8 flex absolute flex-col items-start shadow-main justify-center gap-3 bg-white max-h-screen top-full w-full px-2 m-0">
             <a href="#product" class="menu-link text-base font-normal text-grey-800 hover:text-black">Product</a>
             <a href="#features" class="menu-link text-base font-normal text-grey-800 hover:text-black">Features</a>
             <a href="#getting-started" class="menu-link text-base font-normal text-grey-800 hover:text-black">Get Started</a>
@@ -447,42 +447,6 @@
     
 
     <!-- JAVASCRIPT -->
-    <script>
-      //Nav-bar hamburger functionality 
-
-      const menuLinks = document.querySelectorAll(".menu-link");
-      const mobileMenu = document.getElementById("mobile-menu")
-
-      document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
-        document.getElementById("mobile-menu").classList.toggle("hidden");
-        
-      })
-
-      menuLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
-              mobileMenu.classList.toggle("hidden")
-            });
-          });
-    
-     
-      
-      // Back to top button
-      document.addEventListener("DOMContentLoaded", function () {
-        var backToTopBtn = document.getElementById("back-to-top-btn");
-
-        window.addEventListener("scroll", function () {
-          if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 20) {
-            backToTopBtn.style.display = "block";} 
-          else {
-            backToTopBtn.style.display = "none";}
-        });
-
-        backToTopBtn.addEventListener("click", function () {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        });
-      });
-    </script>
 
     <script src="index.js"></script>
 
