@@ -15,7 +15,7 @@ https://www.loom.com/share/290f4a126b5f4bbf86bf8ab0b0d2aa5f?sid=e3da7b15-7629-4e
 https://docs.google.com/presentation/d/1aNxS_lts4uzVU7ULQFzvcrkjVv9ZrFkw_lq9B1LWQls/edit?usp=sharing
 
 
-##Instalatton of tailwind
+## Instalatton of tailwind
 # Install dependencies
 npm install
 
@@ -28,4 +28,4 @@ npm run build
 # Compile Tailwind CSS minified
 npm run build-minify
 
-```
+
